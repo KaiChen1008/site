@@ -1,6 +1,6 @@
-FROM node:23.6.0
+FROM node:25-alpine3.22
 
 # mount this directory to the container:/app
 WORKDIR /app
 
-CMD ["/bin/bash", "-c", "yarn && yarn start --port 8001"]
+CMD ["sh", "-c", "yarn && yarn start --port 8001"]
